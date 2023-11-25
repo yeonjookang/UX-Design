@@ -26,8 +26,10 @@ class MyPageFragment : Fragment() {
 
     private fun onClick() {
         binding.profilePreviewBtn.setOnClickListener{
-            val intent = Intent(activity, ShowProfileActivity::class.java)
-            startActivity(intent)
+            activity?.let {
+                val intent = Intent(it, ShowProfileActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
