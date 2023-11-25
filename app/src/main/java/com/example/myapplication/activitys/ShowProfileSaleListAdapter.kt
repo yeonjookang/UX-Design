@@ -3,6 +3,7 @@ package com.example.myapplication.activitys
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
@@ -16,6 +17,7 @@ class ShowProfileSaleListAdapter(private val saleItems: List<SaleData>) :
         // 여기에 뷰 홀더 바인딩을 위한 뷰 참조를 초기화합니다.
         val titleTextView: TextView = view.findViewById(R.id.title_of_sale)
         val userIdTextView: TextView = view.findViewById(R.id.user_id_textView)
+        val saleImage: ImageView = view.findViewById(R.id.sale_img)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,6 +29,7 @@ class ShowProfileSaleListAdapter(private val saleItems: List<SaleData>) :
         val item = saleItems[position]
         holder.titleTextView.text = item.title
         holder.userIdTextView.text = item.userName
+        holder.saleImage.setImageResource(item.image)
     }
 
     override fun getItemCount() = saleItems.size
