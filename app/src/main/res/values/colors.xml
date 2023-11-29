@@ -10,4 +10,5 @@
     <color name="icon_unselected_color">#b8b8b8</color>
     <color name="icon_selected_color">#101010</color>
     <color name="gray">#989898</color>
+    <color name="green">#1C4F1C</color>
 </resources>
