@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityHomeBinding
-import com.example.myapplication.fragments.ChatFragment
+import com.example.myapplication.fragments.ChatListFragment
 import com.example.myapplication.fragments.HomeFragment
 import com.example.myapplication.fragments.MyPageFragment
 
@@ -40,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
                     R.id.bnb_kuroup_status ->{
                         supportFragmentManager
                             .beginTransaction()
-                            .replace(R.id.main_frame, ChatFragment())
+                            .replace(R.id.main_frame, ChatListFragment())
                             .commitAllowingStateLoss()
                     }
                     R.id.bnb_home ->{
