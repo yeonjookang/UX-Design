@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         this?.supportActionBar?.hide()
         CoroutineScope(Dispatchers.IO).launch {
             delay(SPLASH_DELAY)
-            val intent = Intent(this@SplashActivity, HomeActivity::class.java)
+            val intent = Intent(this@SplashActivity, LogInActivity::class.java)
             startActivity(intent)
             finish()
         }
