@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatlist_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChatListFragment">
+
+    <ImageView
+        android:id="@+id/kuse_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/kuse_logo" />
+
+    <View
+        android:id="@+id/grayline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/kuse_logo"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/grayline"
+        tools:listitem="@layout/user_layout" />
+
+</RelativeLayout>

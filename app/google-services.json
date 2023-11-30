@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "57286588497",
+    "project_id": "kuse-uxdesign",
+    "storage_bucket": "kuse-uxdesign.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57286588497:android:cbf1d5afd555da82ff6070",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJF-cw0brf2qmJRJFrTMP5SIMC_zdRXt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
