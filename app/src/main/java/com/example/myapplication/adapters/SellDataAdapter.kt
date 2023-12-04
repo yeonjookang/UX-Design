@@ -37,6 +37,7 @@ class SellDataAdapter(val items:ArrayList<SellData>) :
     override fun onBindViewHolder(holder:ViewHolder,position:Int){
         holder.binding.sellTitle.text=items[position].title
         holder.binding.sellAuthor.text=items[position].author
+        holder.binding.userImage.setImageResource(items[position].url)
         //이미지 정보 추가
     }
     fun getItemIndex(data:SellData):Int{

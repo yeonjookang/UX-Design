@@ -13,10 +13,22 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".activitys.SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".activitys.ShareDetailActivity"
             android:exported="false" />
         <activity
             android:name=".activitys.SellDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activitys.LogInActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

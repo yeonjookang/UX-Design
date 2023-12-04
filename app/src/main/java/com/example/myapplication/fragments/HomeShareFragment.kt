@@ -28,10 +28,10 @@ class HomeShareFragment : Fragment() {
 
     private fun init() {
         datas.add(ShareData("공학용 계산기 빌려주실 분 ㅠㅠ", "건구스"))
-        datas.add(ShareData("공학용 계산기 빌려주실 분 ㅠㅠ", "건구스"))
-        datas.add(ShareData("공학용 계산기 빌려주실 분 ㅠㅠ", "건구스"))
-        datas.add(ShareData("공학용 계산기 빌려주실 분 ㅠㅠ", "건구스"))
-        datas.add(ShareData("공학용 계산기 빌려주실 분 ㅠㅠ", "건구스"))
+        datas.add(ShareData("기숙사에 가위 있으신 분", "자취러"))
+        datas.add(ShareData("맥북 충전기 급하게 구합니당", "사과"))
+        datas.add(ShareData("시험 봐야하는데 지우개가 없어요", "건더기"))
+        datas.add(ShareData("노트 몇장만 찢어주실분..", "건대최고"))
 
         viewBinding.shareItemList.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

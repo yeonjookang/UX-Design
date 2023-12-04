@@ -23,5 +23,13 @@ class ShareDetailActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
+        viewBinding.goToChatButton.setOnClickListener {
+            val intent = Intent(this@ShareDetailActivity, ChatActivity::class.java)
+            startActivity(intent)
+        }
+        viewBinding.goToSeller.setOnClickListener{
+            val intent = Intent(this@ShareDetailActivity, ShowProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

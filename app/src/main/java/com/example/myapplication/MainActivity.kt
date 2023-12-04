@@ -12,10 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.activitys.HomeActivity
-import com.example.myapplication.activitys.ShowProfileSaleListAdapter
-import com.example.myapplication.activitys.ShowProfileShareListAdapter
-import com.example.myapplication.data.SaleData
-import com.example.myapplication.data.ShareData
+
+import com.example.myapplication.activitys.SplashActivity
+
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
@@ -27,8 +26,7 @@ class MainActivity : ComponentActivity() {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         // HomeActivity를 시작하는 Intent 생성
-        val intent = Intent(this@MainActivity, HomeActivity::class.java)
-
+        val intent = Intent(this@MainActivity, SplashActivity::class.java)
 
         // Intent를 사용하여 HomeActivity 시작
         startActivity(intent)
