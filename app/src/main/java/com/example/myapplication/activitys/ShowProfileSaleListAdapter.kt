@@ -14,7 +14,6 @@ class ShowProfileSaleListAdapter(private val saleItems: List<SaleData>) :
     RecyclerView.Adapter<ShowProfileSaleListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        // 여기에 뷰 홀더 바인딩을 위한 뷰 참조를 초기화합니다.
         val titleTextView: TextView = view.findViewById(R.id.title_of_sale)
         val userIdTextView: TextView = view.findViewById(R.id.user_id_textView)
         val saleImage: ImageView = view.findViewById(R.id.sale_img)
