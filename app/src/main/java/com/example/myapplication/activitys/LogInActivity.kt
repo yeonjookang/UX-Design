@@ -1,6 +1,7 @@
 package com.example.myapplication.activitys
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,7 +32,12 @@ class LogInActivity : AppCompatActivity() {
             val email = viewBinding.emailEdit.text.toString()
             val password = viewBinding.passwordEdit.text.toString()
 
-            login(email, password)
+            if (isValidEmail(email)) {
+                login(email, password)
+            } else {
+                viewBinding.emailEdit.setTextColor(Color.RED)
+                Toast.makeText(this, "이메일 형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // 회원가입 버튼 이벤트
@@ -40,6 +46,15 @@ class LogInActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    /**
+     * 이메일 형식 유효성 검사
+     */
+    private fun isValidEmail(email: String): Boolean {
+        val emailRegex = Regex("^[A-Za-z0-9._%+-]+@konkuk\\.ac\\.kr$")
+        return emailRegex.matches(email)
+    }
+
 
     /**
      * 로그인

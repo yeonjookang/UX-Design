@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
+import android.graphics.Color
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -39,8 +40,21 @@ class SignUpActivity : AppCompatActivity() {
             val email = viewBinding.emailEdit.text.toString().trim()
             val password = viewBinding.passwordEdit.text.toString().trim()
 
-            signUp(nickname, email, password)
+            if (isValidEmail(email)) {
+                signUp(nickname, email, password)
+            } else {
+                viewBinding.emailEdit.setTextColor(Color.RED)
+                Toast.makeText(this, "이메일 형식이 올바르지 않습니다.", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
+
+    /**
+     * 이메일 형식 유효성 검사
+     */
+    private fun isValidEmail(email: String): Boolean {
+        val emailRegex = Regex("^[A-Za-z0-9._%+-]+@konkuk\\.ac\\.kr$")
+        return emailRegex.matches(email)
     }
 
 
