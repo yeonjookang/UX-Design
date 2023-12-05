@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
+import com.example.myapplication.activitys.CreateActivity
 import com.example.myapplication.activitys.SellDetailActivity
 import com.example.myapplication.adapters.SellDataAdapter
 import com.example.myapplication.databinding.FragmentHomeSellBinding
@@ -47,6 +48,11 @@ class HomeSellFragment : Fragment() {
             }
         }
         viewBinding.sellItemList.adapter = adapter
+
+        viewBinding.createTeamButton.setOnClickListener {
+            val intent = Intent(requireContext(), CreateActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
