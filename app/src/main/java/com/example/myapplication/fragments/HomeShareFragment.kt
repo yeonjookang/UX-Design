@@ -1,12 +1,15 @@
 package com.example.myapplication.fragments
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.activitys.CreateActivity
 import com.example.myapplication.activitys.ShareDetailActivity
 import com.example.myapplication.adapters.ShareDataAdapter
 import com.example.myapplication.databinding.FragmentHomeShareBinding
@@ -24,6 +27,19 @@ class HomeShareFragment : Fragment() {
         viewBinding = FragmentHomeShareBinding.inflate(layoutInflater)
         init()
         return viewBinding.root
+    }
+
+    private val createActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            result.data?.let { data ->
+                val newTitle = data.getStringExtra("newTitle")
+                val newContent = data.getStringExtra("newContent")
+
+                // 새로운 SellData 객체 추가
+                datas.add(ShareData(newTitle!!, "건구스"))
+                adapter.notifyDataSetChanged()
+            }
+        }
     }
 
     private fun init() {
@@ -47,5 +63,10 @@ class HomeShareFragment : Fragment() {
             }
         }
         viewBinding.shareItemList.adapter = adapter
+
+        viewBinding.createTeamButton.setOnClickListener {
+            val intent = Intent(requireContext(), CreateActivity::class.java)
+            createActivityLauncher.launch(intent)
+        }
     }
 }
