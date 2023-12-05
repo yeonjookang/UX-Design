@@ -98,7 +98,7 @@
                     android:layout_marginBottom="15dp"
                     android:textColor="#555555"
                     android:textSize="15dp"
-                    android:text="중간고사 봐야하는데 집에 깜빡하고 두고 왔어요 ㅠ \n빌려주실 천사분 ㅠㅜㅜ"/>
+                    android:text="중간고사에 필요한데 깜빡했어요.. 빌려주실 천사분ㅠ"/>
 
                 <TextView
                     android:id="@+id/date"
