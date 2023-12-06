@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17sp"
-            android:text="김쿠즈"
+            android:text="김건덕"
             android:layout_marginStart="30dp"
             android:textColor="@color/black"/>
     </LinearLayout>
