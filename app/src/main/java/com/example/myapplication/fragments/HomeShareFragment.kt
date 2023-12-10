@@ -36,7 +36,7 @@ class HomeShareFragment : Fragment() {
                 val newContent = data.getStringExtra("newContent")
 
                 // 새로운 SellData 객체 추가
-                datas.add(ShareData(newTitle!!, "건구스"))
+                datas.add(ShareData(newTitle!!, "건덕이"))
                 adapter.notifyDataSetChanged()
             }
         }
