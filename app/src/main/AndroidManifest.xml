@@ -19,9 +19,6 @@
             android:name=".activitys.CreateActivity"
             android:exported="false" />
         <activity
-            android:name=".activitys.CreateActivity"
-            android:exported="false" />
-        <activity
             android:name=".activitys.SplashActivity"
             android:exported="false" />
         <activity
