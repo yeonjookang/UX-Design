@@ -27,7 +27,7 @@ class SellDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
         viewBinding.goToSeller.setOnClickListener{
-            val intent = Intent(this@SellDetailActivity, ShowProfileActivity::class.java)
+            val intent = Intent(this@SellDetailActivity, ShowProfileActivity2::class.java)
             startActivity(intent)
         }
     }
