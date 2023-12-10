@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title_of_share"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="건덕이"
+        android:text="김건덕"
         android:layout_marginStart="20dp"
         android:textColor="#A6A6A6"/>
 
